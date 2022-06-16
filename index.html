@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<!-- Samin Basir
+   File: index.html
+	 Samin_basir@student.uml.edu
+	 Computer Science Student UMass Lowell 91.461 GUI Programming I
+	 Date: 6/13/2022
+   Updated: 6/15/2022 by Samin Basir
+   created a table completely dynamically based on parameters entered
+in an HTML form
+-->
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Homework 3</title>
+        <!-- css file -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form">
+            <h1> Interactive Dynamic Table</h1>
+            <form>
+              <!-- asking users to input values for rows -->
+              Enter four numbers (range -50 to 50)<br><br>
+              <fieldset style="float: left; width: 30px; background-color:lightgrey;">
+              <legend><b>Enter the range of multiplier from Minimum to Maximum:</legend>
+              <input type="text" id="firstR" placeholder="Minimum Row Value" required="required"/>
+                  <span class="firstRText"></span>
+                  </br>
+              <input type="text" id="lastR" placeholder="Maxium Row Value" required="required" />
+                  <span class="lastRText"></span>
+                  <br>
+              </fieldset>
+              <br>
+              <fieldset style="float: left; width:100px; background-color:lightgrey;">
+                
+              <!-- get the min and end max of coloumn -->
+              <legend>Enter the range of multiplicand from Minimum to Maxium:</legend>
+              <input type="text" id="firstC" placeholder="Minimum column value" required="required" />
+                  <span class="firstCText"></span>
+                  <br>
+              <input type="text" id="lastC" placeholder="Maximum column value" required="required" />
+                  <span class="lastCText"></span>
+                  <br>
+              </fieldset>
+              <br>
+            </form>
+
+            <!-- submit(Generate) button  -->
+            <button type="button" onclick="TableStart()">Submit</button>
+          </div>
+        </div>
+        </div>
+        <br>
+        <div id="table">
+        </div>
+        <script src="js/script.js">
+        </script>
+    </body>
+</html>
